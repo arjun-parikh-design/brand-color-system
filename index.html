@@ -747,6 +747,9 @@
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
     color: var(--text-secondary);
+    filter: blur(5px);
+    user-select: none;
+    pointer-events: none;
   }
 
   /* ── ACCESSIBILITY ────────────────────────────────────── */
@@ -1870,9 +1873,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 32px 24px 8px;
+      padding: 8px 24px 8px;
       animation: fadeUp 0.6s ease both;
     }
+    #hero-palette-strip-wrap { padding-bottom: 8px !important; }
     .mobile-gif-img {
       width: 180px;
       height: 180px;
@@ -2561,7 +2565,7 @@
           Our 2026 color system is the foundation of how Postman communicates visually. From hero orange to supporting ranges across orange, purple, magenta, yellow, blue, and neutrals. Every value is intentional, built for consistency across digital, web, print, and beyond.
         </p>
 
-        <div class="hero-palette-strip" style="position:relative; padding-bottom:32px;">
+        <div class="hero-palette-strip" style="position:relative; padding-bottom:32px;" id="hero-palette-strip-wrap">
           <div style="display:flex; border-radius:10px; overflow:hidden; height:48px; max-width:520px;">
             <div class="strip-swatch" style="background:#FFFBF7"><div class="strip-label">O: 00</div></div>
             <div class="strip-swatch" style="background:#FFD7C7"><div class="strip-label">O: 20 · Apricot</div></div>
@@ -2589,7 +2593,7 @@
 
     <!-- MOBILE LOTTIE — inside hero section, below text, hidden on desktop -->
     <div class="mobile-gif-break">
-      <div id="lottie-mobile" style="width:260px;height:260px;border-radius:24px;overflow:hidden;"></div>
+      <div id="lottie-mobile" style="width:320px;height:320px;border-radius:24px;overflow:hidden;"></div>
     </div>
 
   </div><!-- /.hero -->
